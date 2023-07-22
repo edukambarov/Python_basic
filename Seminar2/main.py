@@ -68,13 +68,13 @@
 
 # Определить самую долгую оттепель (temp > 0) в течение месяца зимы
 
-days = 30
-temp = 0
-count = 0
-import random
-for i in range(days):
-    temp += random.randint(-10, 10)
-    if temp >= 0:
-        count += 1
-    else: count = 0
-print(f'Самая долгая оттепель составила {count} дней')
+# days = 30
+# temp = 0
+# count = 0
+# import random
+# for i in range(days):
+#     temp += random.randint(-10, 10)
+#     if temp >= 0:
+#         count += 1
+#     else: count = 0
+# print(f'Самая долгая оттепель составила {count} дней')
