@@ -59,4 +59,20 @@ for l in letters:
 print(sum)
 
 
-    
+# points = {"A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т": 1,
+#           "DGД, К, Л, М, П, У": 2,
+#           "B, C, M, PБ, Г, Ё, Ь, Я": 3,
+#           "F, H, V, W, YЙ, Ы": 4,
+#           "K ЖЗХЦЧ": 5,
+#           "JXШЭЮ": 8,
+#           "QZФЩЪ": 10}
+# # .lower() <-> .upper()
+# word = input("Введите текст: ").upper()
+# count = 0
+# # "Ivan"
+# #  0123
+# for char in word:
+#     for key in points:
+#         if char in key:
+#             count += points[key]
+# print(count)
