@@ -7,7 +7,7 @@
 def rec_sum(a,b):
     if b ==0:
         return a
-    return rec_sum(a+1,b-1)
+    return 1 + rec_sum(a,b-1)
 
 a = int(input("Введите число a: "))
 b = int(input("Введите число b: "))
