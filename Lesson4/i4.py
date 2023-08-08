@@ -2,12 +2,15 @@
 #     return a + b
 # def calc2(a, b):
 #     return a * b
-# def math(op, a, b):
-#     print(op(a,b))
+# def math(op, x, y):
+#     print(op(x,y))
 
-# math(calc2, 3, 5)
-# math(calc1, 3, 5)
 
+# calc1 = lambda a,b: a + b
+# math (calc1,2,5)
+
+# math(lambda a,b: a + b, 6, 7)
+ 
 data = [1,2,3,5,8,15,23,38]
 res = list()
 
@@ -21,8 +24,10 @@ res = list()
 
 # def where(f, col):
 #     return [x for x in col if f(x)]
+
 # res = map(int, data)
 # print(res)
+
 # res = where(lambda x: x % 2 == 0, res)
 # print(res)
 # res = list(map(lambda x: (x, x*x), res))
