@@ -26,7 +26,7 @@ print(calc_count(count_all))
 
 # Генерация списка
 def list_gen(min_value=-5, max_value=5, lst_len=10):
-    return [randint(min_value, max_value) for i in range(lst_len)]
+    return [random.randint(min_value, max_value) for i in range(lst_len)]
 
 
 # Текстовый разделитель
