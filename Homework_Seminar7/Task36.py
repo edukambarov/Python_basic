@@ -45,7 +45,7 @@ def print_operation_table(operation, a, b):
  
 num_rows = int(input("Введите число: "))
 num_columns =num_rows
-print_operation_table(bin_act_3,num_rows,num_columns)
+print_operation_table(bin_act_6,num_rows,num_columns)
 
 
 

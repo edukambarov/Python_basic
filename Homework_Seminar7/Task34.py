@@ -35,4 +35,5 @@ def rhythm (list_1):
                 rhythm[x]+=1
     return rhythm
 
+print(rhythm(symbols))
 print('Парам пам-пам (Yes)' if len(set(rhythm(symbols))) == 1 else 'Пам парам (No)')
