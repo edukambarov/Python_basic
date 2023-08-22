@@ -25,10 +25,6 @@ for row in a:
         print(element, end=' ')
     print()
 
-start = a[1][0]
-print()
-print(start)
-path = 0
-for x,y in 
+
 
 

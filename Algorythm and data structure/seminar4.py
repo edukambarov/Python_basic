@@ -1,5 +1,3 @@
-# Создание нодов, 
-
 class Node:
     def __init__(self, value, left = None, right=None):
         self.value = value
@@ -22,30 +20,46 @@ class Tree:
 
     def search(self, node, data, parent = None):
         if node == None or data == node.value:              
-            return node, parent 
+            return node, parent      
         if data > node.value:             
             return self.search(node.right, data, node)
         if data < node.value:            
             return self.search(node.left, data, node)
         
-    def add_node(self, value):        
+    def add_node(self, value):
         res = self.search(self.root, value)
-        if not res[2]:
+        if res[0] is None:
             new_node = Node(value)
-            if value > res[0].value:
-                res[0].right = new_node
+            if value > res[1].value:
+                res[1].right = new_node
             else:
-                res[0].left = new_node
+                res[1].left = new_node
         else:
             print('Ой все, такое значение уже есть')
+
+    def delete_node(self,value):
+        res = self.search(self.root,value)
+        if res[0]:
+            res[0] = 
+
+
         
 
 
 node_1 = Node(15)
 tree_1 = Tree(node_1)
-print(tree_1.search(node_1,15)[0])
+print(tree_1.search(node_1,15))
 print(node_1.right)
 
 tree_1.add_node(16)
-#print(node_1)
-      
+print(node_1.right)
+print(node_1)
+print(tree_1.search(node_1, 16))
+
+
+tree_1.add_node(17)
+tree_1.add_node(10)
+tree_1.add_node(20)
+tree_1.add_node(12)
+tree_1.add_node(25)
+print(node_1.left)
