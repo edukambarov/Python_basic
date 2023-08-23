@@ -45,16 +45,11 @@ def segregate_by_parameter(lst, value):
             i+=1
     result.insert(i,subresult)
     return result
-    
-init_list = [randint(1,5) for _ in range(15)]
-parameter_1 = 10
-print(init_list)
-print(segregate_by_parameter(init_list,parameter_1))
 
-# Ряд функций и методов Python также работают с вложенными списками.
+n = int(input('Введите кол-во элементов в списке: '))
+m = int(input('Введите максимальное значение элемента списка: '))
+init_list = [randint(1,m) for _ in range(n)]
+print(f'Исходный список: {init_list}')
+parameter_1 = int(input('Введите параметр (число) для сравнения и формирования вложенных списков: '))
+print(f'Результат: {segregate_by_parameter(init_list,parameter_1)}')
 
-# len(): Возвращает количество подсписков во вложенном списке.
-# append(): Добавляет новый подсписок в конец вложенного списка.
-# extend(): Добавляет элементы из одного списка в другой список.
-# insert(): Вставляет новый подсписок на определенную позицию во вложенном списке.
-# remove(): Удаляет первый подсписок во вложенном списке, который совпадает с указанным.

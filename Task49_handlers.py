@@ -29,4 +29,3 @@ def correct_data():
     data.write(human_data)
     data.close()
 
-def 

@@ -28,6 +28,5 @@ def fib (n):
     else:
         return fib(n-1) + fib(n-2)
     
-number = 7
-
-print(f'{number}-м числом Фибоначчи является число {fib(number)}')
+number = int(input('Введите число: '))
+print(f'{number}-м числом последовательности Фибоначчи является число {fib(number)}.')
