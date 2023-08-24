@@ -11,9 +11,6 @@
 # Это позволяет выделить процесс создания каждого подмассива в отдельную подпрограмму,
 # делая основной код более чистым и понятным.
 
-
-
-
 # Задание:
 # Напишите функцию, которая принимает массив чисел и значение X. 
 # Функция должна возвращать массив подмассивов так, 
@@ -39,8 +36,8 @@ def segregate_by_parameter(lst, value):
         else:
             result.insert(i,subresult)
             subresult = []
-            subresult.append(lst[x])
-            sum = lst[x]
+            subresult.append(lst[x]) #иначе не попадёт не в один subresult, for его уже прошёл
+            sum = lst[x]             #иначе не учтём в sum, for его уже прошёл
             start = x - 1
             i+=1
     result.insert(i,subresult)
