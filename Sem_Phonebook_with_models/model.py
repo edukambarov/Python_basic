@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-PATH = 'D:\GeekBrains\Python курс Analyst\Seminar9\phones.txt'
+PATH = 'phones.txt'
 phone_book ={}
 original_book = {}
 
