@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-PATH = 'D:\GeekBrains\Python курс Analyst\Seminar9\phones.txt'
+PATH = 'D:\GeekBrains\Python курс Analyst\Sem_Phonebook_with_models\phones.txt'
 phone_book ={}
 original_book = {}
 
@@ -40,7 +40,7 @@ def search(word: str) -> dict[int, list[str]]:
 def edit(c_id: int, contact: list[str]):
     global phone_book
     current_contact = phone_book.get(c_id)
-    new_contact = [contact[i] if contact[i] else current_contact[i] for i in range(3)]
+    new_contact = [contact[i] if contact[i] else current_contact[i] for i in range(len(current_contact))]
     phone_book[c_id] = new_contact
     return contact[0] if contact[0] else current_contact[0]
 
