@@ -35,7 +35,7 @@ diff =[]
 for i in range(len(our_list)):
     diff.append(abs(our_list[i] - parameter))
 for x in range(len(diff)):
-    if diff[x] == min(diff):
+    if x == min(diff):
         print(f'Число: {our_list[x]}, индекс: {x}.')
 
 # Декларативный подход
