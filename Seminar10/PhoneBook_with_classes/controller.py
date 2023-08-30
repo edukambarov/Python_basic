@@ -2,7 +2,7 @@ import view
 import text
 from model import PhoneBook
 
-pb = PhoneBook()
+pb = PhoneBook() # вынес сюда, чтобы search_block тоже работал с экземпляром класса PhoneBook
 
 def search_block(msg: str):
     request = view.input_request(msg)
