@@ -5,18 +5,6 @@
 # Используйте ленивые вычисления,
 # чтобы генерировать только те числа, которые действительно нужны.
 
-# "Ленивые" вычисления
-
-# def fibonacci():
-#     a,b = 0,1
-#     while True:
-#         yield a
-#         a, b = b, a + b
-
-# fib = fibonacci()
-
-# for _ in range(10):
-#     print(next(fib))
 
 def prime_numbers_generator():
     a = 1
