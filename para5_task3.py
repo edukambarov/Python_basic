@@ -19,39 +19,48 @@
 # Задача состоит в том, чтобы написать программу, 
 # которая находит НОП для двух заданных строк.
 
-def find_seq(lst1: list[str], lst2: list[str]):
-    a = count_letters(lst1)
-    b = count_letters(lst2)
-    c = set(a).intersection(set(b))
-    res = []
+def find_max_seq(x: str, y: str):
+    xx = list(x)
+    yy = list(y)
+    a = xx.copy()
+    b = yy.copy()
     for any in a:
-        if any in c:
-            res.append(any)
-    print(res)
+        if any not in set(yy):
+            a.remove(any)
+    for other in b:
+        if other not in set(xx):
+            b.remove(other)
+    seq = []
+    if len(a) > len(b):
+        for i in range(len(a)):
+            for j in range(len(b)):
+                if a[i:] == b[j:]:
+                    seq.append(a[i:])
+    max_seq = seq[0]
+    for k in range(1,len(seq)):
+        if len(seq[k]) > len(max_seq):
+            max_seq = len(seq[k])
+    result = ''.join(max_seq)
+    return result
 
-    # print(res)
-    for any in res:
-        if any.isdigit():
-            res.remove(any)
-    return ''.join(res)
 
+X = "AGGTAB"
+Y = "GXTXAYB"
+print(find_max_seq(X, Y))
 
-def count_letters(lst: list[str]):
-    xlist = list(lst)
-    xcount = [None] * len(xlist)
-    for j in range(len(xlist)-1):
-        xcount[j] = xlist[:j+1].count(xlist[j])
-    xcount[-1] = xlist.count(xlist[-1])
-    xmod = []
-    for j in range(len(xlist)):
-        xmod.append(xlist[j] + str(xcount[j]))
-    return xmod
+# Интересно, но не пригодилось:-)
 
-x = "AGGTTAB"
-print(count_letters(x))
-y = "GXTXTAYB"
-print(count_letters(y))
-print(find_seq(x,y))
+# def count_letters(lst: str):
+#     xlist = list(lst)
+#     xcount = [None] * len(xlist)
+#     for j in range(len(xlist)-1):
+#         xcount[j] = xlist[:j+1].count(xlist[j])
+#     xcount[-1] = xlist.count(xlist[-1])
+
+#     xmod = []
+#     for j in range(len(xlist)):
+#         xmod.append(xlist[j] + str(xcount[j]))
+#     return xmod
     
         
         
