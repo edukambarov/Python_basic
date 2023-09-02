@@ -31,11 +31,10 @@ def find_max_seq(x: str, y: str):
         if other not in set(xx):
             b.remove(other)
     seq = []
-    if len(a) > len(b):
-        for i in range(len(a)):
-            for j in range(len(b)):
-                if a[i:] == b[j:]:
-                    seq.append(a[i:])
+    for i in range(len(a)):
+        for j in range(len(b)):
+            if a[i:] == b[j:]:
+                seq.append(a[i:])
     max_seq = seq[0]
     for k in range(1,len(seq)):
         if len(seq[k]) > len(max_seq):
