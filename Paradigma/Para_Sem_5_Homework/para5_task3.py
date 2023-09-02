@@ -22,14 +22,14 @@
 def find_max_seq(x: str, y: str):
     xx = list(x)
     yy = list(y)
-    a = xx.copy()
-    b = yy.copy()
-    for any in a:
-        if any not in set(yy):
-            a.remove(any)
-    for other in b:
-        if other not in set(xx):
-            b.remove(other)
+    a = []
+    b = []
+    for any in xx:
+        if any in set(yy):
+            a.append(any)
+    for item in yy:
+        if item in set(xx):
+            b.append(item)
     seq = []
     for i in range(len(a)):
         for j in range(len(b)):
