@@ -46,5 +46,5 @@ def start():
                     if view.input_request(text.confirm_changes).lower() == 'y':
                         pb.save_file()
                         view.print_message(text.file_save_successful) 
-                    view.print_message(text.end_program)
-                    break
+                view.print_message(text.end_program)
+                break
